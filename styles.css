@@ -1,5 +1,6 @@
 /*TOP CABEÇALHO*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 * {
     font-family: "Roboto", sans-serif;
     box-sizing: border-box;
@@ -7,183 +8,316 @@
     padding: 0;
 }
 
-body, html {
-    background-color: #000;
-    color: #fff
+/*DEFININDO VARIAVEL NO CSS*/
+:root {
+    /*1rem = 16px, então há 48px em cada espaço, x2 espaço 96px*/
+    --gap: 3rem --easide: 200px --cor3:red --cor4: blue --cor5: red --sobra:15px
 }
 
-a, a:hover, a:visited {
+div>p {
+    color: white;
+}
+
+header h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+header>p {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+nav ul li {
+    /*editando o espaço do texto*/
+    padding: 20px;
+    display: inline;
+
+}
+
+nav {
+    /*editando o texto*/
+    text-align: right;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+
+}
+
+nav>a {
+    color: white;
+    text-decoration: none;
+    width: 100px;
+}
+
+a a:hover,
+a:visited {
+    background-color: rgb(25, 62, 131);
+    border-radius: 5px;
     color: unset;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 15px;
     text-decoration: none;
 }
 
-header {
-    background: linear-gradient(180deg, #102347 50%, #181818 100%);
-    height: 150px;
-    display: flex;
-    align-items: center;
+/* FORMATANDO O CORPO PRINCIPAL*/
+body {
+    background-color: var(--cor5);
+    font-family: serif;
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    /* grid-gap: 1rem; */
+    /*espaço entre os elementos do grid*/
+    grid-template-columns: auto auto auto;
+    /*vh = atribui total de linhas da viewport,*/
+    grid-template-rows: auto auto auto;
+}
+
+.o-header {
+    grid-area: header;
+    margin-inline-start: 0px;
+    margin-trim: 15px 15px;
+    background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.o-aside {
+    grid-area: aside;
+    border-radius: 10px;
+    /*raio da borda*/
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.o-main {
+    grid-area: main;
+    border-radius: 10px;
+    /*raio da borda*/
+    margin-top: 5px;
+}
+
+.o-footer {
+    grid-area: footer;
+    margin-top: 5px;
+}
+
+.o-header {
+    background-image: linear-gradient(to bottom, #080075, rgb(25, 62, 131));
+}
+
+.o-aside,
+.o-main,
+.o-footer {
+    background: rgb(25, 62, 131);
+    color: #fdfdfd;
+    padding-top: 10px;
+}
+
+.aside-form-container {
+    margin-bottom: 15px;
+    /*margem ext a baixo*/
+    max-width: 500px;
+}
+
+/* ITENS DO ASIDE */
+.aside-form-botao {
+    width: calc(var(--easide));
+    /*comprimento da caixa*/
+    height: 20px;
+    /*altura da caixa*/
+    background-color: #080075;
+    /*cor preenchimetno*/
+    border: 1px solid;
+    /*grossura da borda*/
+    border-radius: 5px;
+    /*raio da borda*/
+    color: white;
+    /*cor do texto da caixa*/
+    margin-left: 15px;
+    padding: 5px;
+    /*espaço vert e horiz*/
+    font-size: 12px;
+    align-items: flex;
+}
+
+.aside-click-botao {
+    /*alinhando o botão*/
+    display: contents;
+    /*o elemento fica solto no quadrante*/
     justify-content: center;
 }
 
-.patrimu-menu-botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.patrimu-menu-botoes img {
-    width: 400px;
+.aside-bloco-container {
+    /* margin: 5px 5px 5px 5px;
+    max-width: calc(var(--easide)); */
+    text-align: center;
 }
 
-.patrimu-menu-botoes h1 {
-    text-align-last: left;
-    margin-top: 20px;
+.aside-bloco-botao {
+    background-color: black;
+    border-radius: 5px;
+    height: 520px;
+    width: 200px;
+
+}
+
+/* ITENS DO MAIN */
+
+/* .patrimu-card-info {
+    background-color: #283142;
+    border-radius: 10px;
+    /*raio da borda
+    padding: 30px 10px;
+    /*espaço entre itens e borda
+} */
+
+/* .patrimu-card-title {
+    color: #676fff;
+    /*cor dafonte
     font-size: 24px;
-    
-}
-
-.patrimu-menu-botoes p {
-    margin-top: 14px;
-    font-size: 12px;
-    font-weight: 300;
-}
-
-/* PRINCIPAL - MAIN*/
-
-.patrimu-card-info {
-    background-color: #283142;
-    border-radius: 10px ; /*raio da borda*/
-    padding: 30px 10px; /*espaço entre itens e borda*/
-
-}
-
-.patrimu-container-info {
-    width: 100%; /*quanto ocupa da largura*/
-    max-width: 900px; /*lagura max usada*/
-    margin: 0 auto;
-}
-
-#sales {/*id inicia com #*/
-    padding: 40px 10px; /*vert e hori*/
-    
-}
-
-.patrimu-card-graf {
-    background-color: #283142;
-}
-
-.patrimu-container-graf {
-    width: 100%; /*quanto ocupa da largura*/
-    max-width: 900px; /*lagura max usada*/
-}
-
-.patrimu-card-title {
-    color: #676fff; /*cor dafonte*/
-    font-size: 24px; /*tamanho da fonte*/
+    /*tamanho da fonte
     margin-bottom: 20px;
-}
+} */
 
-.patrimu-form-control-container{
-    margin-bottom: 16px; /*margem ext a baixo*/
+/* .patrimu-form-control-container {
+    margin-bottom: 16px;
+    /*margem ext a baixo
     max-width: 300px;
-}
+} */
 
-.patrimu-form-control {
-    width: 100%; /*comprimento da caixa*/
-    height: 46px; /*altura da caixa*/
-    background-color: #1b2531; /*cor preenchimetno*/
-    border: 1px solid #384459; /*grossura da borda*/
-    border-radius: 5px ; /*raio da borda*/
-    color: #9AAABE; /*cor do texto da caixa*/
-    padding: 0 20px; /*espaço vert e horiz*/
+/* .patrimu-form-control {
+    width: 100%;
+    /*comprimento da caixa
+    height: 46px;
+    /*altura da caixa
+    background-color: #1b2531;
+    /*cor preenchimetno
+    border: 1px solid #384459;
+    /*grossura da borda
+    border-radius: 5px;
+    /*raio da borda
+    color: #9AAABE;
+    /*cor do texto da caixa
+    padding: 0 20px;
+    /*espaço vert e horiz
     font-size: 18px;
-}
+} */
 
-.patrimu-sales-table{
-    /*formatar a tabela*/
-    width: 100%; /*largura de toda tabela*/
+/* .patrimu-sales-table {
+    /*formatar a tabela
+    width: 100%;
+    /*largura de toda tabela
     border-spacing: 0;
-    border-collapse: collapse; /*mostrar linha divisória da tabela*/
-}
+    border-collapse: collapse;
+    /*mostrar linha divisória da tabela
+} */
 
-.patrimu-sales-table thead {
-    /*formatar titulo da tabela*/
+/* .patrimu-sales-table thead {
+    /*formatar titulo da tabela
     height: 55px;
     font-size: 16px;
     color: #e9e9e9;
     font-weight: 700;
-}
+} */
 
-.patrimu-sales-table tbody {
-    /*formatar body dentro do table*/
-    /*height: 500px; /*espaço entre altura dos itens- ñ deu certo*/
-    font-size: 14px; /*tamanho da fonte*/
+/* .patrimu-sales-table tbody {
+    /*formatar body dentro do table
+    /*height: 500px; /*espaço entre altura dos itens- ñ deu certo
+    font-size: 14px;
+    /*tamanho da fonte
     color: #cfcfcf;
     font-weight: 400;
     text-align: center;
-}
+} */
 
-.patrimu-sales-table tbody tr {
-    /*formatar linha da tabela*/
+/* .patrimu-sales-table tbody tr {
+    /*formatar linha da tabela
     height: 74px;
     background-color: #283142;
     border-top: 1px solid #5f6e82;
-}
+} */
 
-.patrimu-sales-table tbody tr:hover > th {
-    /*muda a cor ao passar pelas linhas da tabela*/
+/* .patrimu-sales-table tbody tr:hover>th {
+    /*muda a cor ao passar pelas linhas da tabela
     background-color: #384459;
-}
+} */
 
-.patrimu-sales-table tbody tr:nth-child(odd) {
-    /*use essa formatação quando o filho do tr for impar(odd)*/
+/* .patrimu-sales-table tbody tr:nth-child(odd) {
+    /*use essa formatação quando o filho do tr for impar(odd)
     background-color: #242c3b;
-}
+} */
 
-.patrimu-red-btn-conteiner {
-    /*alinhando o botão*/
-    display: flex; /*o elemento fica solto no quadrante*/
+/* .patrimu-red-btn-conteiner {
+    /*alinhando o botão
+    display: flex;
+    /*o elemento fica solto no quadrante
     justify-content: center;
-}
+} */
 
-.patrimu-red-btn {
-    /*formatando a imagem dentro do botão criado*/
+/* .patrimu-red-btn {
+    /*formatando a imagem dentro do botão criado
     height: 45px;
     width: 45px;
-    background: rgba(255,107,114,0.1);
+    background: rgba(255, 107, 114, 0.1);
     border: 1px solid #ff6b72;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-items: center;
-    cursor: pointer;/*ao passar o mouse, vira a mão*/
-}
-.patrimu-red-btn img {
+    cursor: pointer;
+    /*ao passar o mouse, vira a mão
+} */
+
+/* .patrimu-red-btn img {
     width: 19px;
-}
+} */
 
 /* >>RESPONSIVIDADE<< */
-.show576 {/*por padrão não vai mostrar*/
+/* .show576 {
+    /*por padrão não vai mostrar
     display: none;
-}
+} */
 
-@media (min-width: 576px) {
-    /*ponto do px larg a coluna irá aparecer*/
-    .show576 {display: table-cell;
+/* @media (min-width: 576px) {
+
+    /*ponto do px larg a coluna irá aparecer
+    .show576 {
+        display: table-cell;
     }
-    .patrimu-card-info {padding: 35px;
+
+    .patrimu-card-info {
+        padding: 35px;
     }
-    .patrimu_sales-table tbody tr {height: 55px;
+
+    .patrimu_sales-table tbody tr {
+        height: 55px;
     }
-    .patrimu-sales-table tbody {font-size: 18px;
+
+    .patrimu-sales-table tbody {
+        font-size: 18px;
     }
-}
+} */
 
 
-.show720 {/*por padrão não vai mostrar*/
+/* .show720 {
+    /*por padrão não vai mostrar
     display: none;
-}
+} */
 
-@media (min-width: 720px) {
-    /*ponto do px larg a coluna irá aparecer*/
-    .show720 {display: table-cell;}
-}
+/* @media (min-width: 720px) {
+
+    /*ponto do px larg a coluna irá aparecer
+    .show720 {
+        display: table-cell;
+    }
+} */
