@@ -3,7 +3,7 @@
 
 * {
     font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
 }
@@ -11,62 +11,21 @@
 /*DEFININDO VARIAVEL NO CSS*/
 :root {
     /*1rem = 16px, então há 48px em cada espaço, x2 espaço 96px*/
-    --gap: 3rem --easide: 200px --cor3:red --cor4: blue --cor5: red --sobra:15px
+    --gap: 3rem;
+    --easide: 200px;
+    -sobra: 15px;
+    --cor7: #0C376F;
+    --cor6: #2A4E7F;
+    --cor5: #48658F;
+    --cor4: #667C9F;
+    --cor3: #8392AE;
+    --cor2: #A1A9BE;
+    --cor1: #BFC0CE;
 }
 
-div>p {
-    color: white;
-}
-
-header h1 {
-    color: white;
-    font-family: var(--fonte-destaque);
-    margin-bottom: 20px;
-    font-size: 2em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
-}
-
-header>p {
-    font-size: 1.2em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
-}
-
-nav ul li {
-    /*editando o espaço do texto*/
-    padding: 20px;
-    display: inline;
-
-}
-
-nav {
-    /*editando o texto*/
-    text-align: right;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-
-}
-
-nav>a {
-    color: white;
-    text-decoration: none;
-    width: 100px;
-}
-
-a a:hover,
-a:visited {
-    background-color: rgb(25, 62, 131);
-    border-radius: 5px;
-    color: unset;
-    text-decoration: none;
-    transition-duration: 0.5s;
-    padding: 15px;
-    text-decoration: none;
-}
-
-/* FORMATANDO O CORPO PRINCIPAL*/
+/* ------ LAYOUT PRINCIPAL ------*/
 body {
-    background-color: var(--cor5);
+    /* background-color: var(--cor2); */
     font-family: serif;
     display: grid;
     grid-gap: 0;
@@ -79,71 +38,112 @@ body {
     grid-template-columns: auto auto auto;
     /*vh = atribui total de linhas da viewport,*/
     grid-template-rows: auto auto auto;
+
 }
 
 .o-header {
     grid-area: header;
-    margin-inline-start: 0px;
-    margin-trim: 15px 15px;
-    background-image: linear-gradient(to bottom, var(--cor4), var(--cor5));
+    background: var(--cor7);
     text-align: left;
-    padding-top: 20px;
-    padding-left: 20px;
+    margin-top: 20px;
+    padding-top: 0px;
+    padding-left: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .o-aside {
     grid-area: aside;
-    border-radius: 10px;
-    /*raio da borda*/
-    margin-top: 5px;
-    margin-right: 5px;
 }
 
 .o-main {
     grid-area: main;
-    border-radius: 10px;
-    /*raio da borda*/
-    margin-top: 5px;
-}
-
-.o-footer {
-    grid-area: footer;
-    margin-top: 5px;
-}
-
-.o-header {
-    background-image: linear-gradient(to bottom, #080075, rgb(25, 62, 131));
+    /* border-radius: 10px; */
 }
 
 .o-aside,
-.o-main,
-.o-footer {
-    background: rgb(25, 62, 131);
+.o-main {
+    background: var(--cor3);
     color: #fdfdfd;
     padding-top: 10px;
 }
+
+.faixa-de-cor {
+    background-color: var(--cor1);
+    /* padding-top: 0px;
+    margin-inline-end: 0%;
+    margin-inline-start: 0px; */
+
+}
+
+/* ------ LAYOUT PRINCIPAL ------*/
+a,
+a:hover,
+a:visited {
+    color: var(--cor3);
+    border-radius: 5px;
+    /* color: unset; */
+    text-decoration: none;
+    transition-duration: 0.5s;
+    padding: 15px;
+    text-decoration: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+header h1 {
+    color: var(--cor2);
+    font-size: 2em;
+    text-shadow: 0.3px 0px 1px;
+
+}
+
+header>p {
+    font-size: 1.2em;
+    /* text-shadow: 2px 2px 0px var(--cor2); */
+
+}
+
+nav {
+    text-align: right;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+
+
+}
+
+nav ul li {
+    padding: 20px;
+    display: inline;
+}
+
+nav>a {
+    text-decoration: none;
+    width: 100px;
+}
+
 
 .aside-form-container {
     margin-bottom: 15px;
     /*margem ext a baixo*/
     max-width: 500px;
+
 }
 
-/* ITENS DO ASIDE */
+/* ---- ITENS DO ASIDE ----  */
 .aside-form-botao {
     width: calc(var(--easide));
     /*comprimento da caixa*/
     height: 20px;
     /*altura da caixa*/
-    background-color: #080075;
+    background-color: var(--cor7);
     /*cor preenchimetno*/
     border: 1px solid;
     /*grossura da borda*/
-    border-radius: 5px;
-    /*raio da borda*/
     color: white;
     /*cor do texto da caixa*/
-    margin-left: 15px;
+    margin-left: 80px;
     padding: 5px;
     /*espaço vert e horiz*/
     font-size: 12px;
@@ -164,12 +164,124 @@ body {
 }
 
 .aside-bloco-botao {
-    background-color: black;
+    background-color: var(--cor1);
     border-radius: 5px;
+    margin: 5px 5px 5px;
     height: 520px;
-    width: 200px;
+    width: 300px;
+}
+
+/* ---- ITENS DO MAIN ----  */
+.noticia-linha {
+    display: flex;
+    flex-flow: row wrap;
+    padding-block-end: 300px; 
+}
+
+.subsecao-col1 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor7);
+    margin: 1% 1% 1% 1.6%;
+    width: 33%;
+    display:inline-block;
+}
+
+.subsecao-col2 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor7);
+    margin: 1% 1% 1% 1.6%;
+    width: 25%;
+    display: inline-block;
+}
+
+.subsecao-col3 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor7);
+    margin: 1% 1% 1% 1.6%;
+    width: 20%;
+    display: inline-block;
+}
+
+.subsecao-col4 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor7);
+    margin: 1% 1% 1% 1.6%;
+    width: 25%;
+    display:inline-block;
+}
+
+.o-main {
+    grid-area: main;
 
 }
+
+/* ---- ITENS DO FOOTER ----  */
+.o-footer {
+    grid-area: footer;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: left;
+    height: auto;
+    background: var(--cor7);
+    color: #fdfdfd;
+    padding-top: 5px;
+    text-decoration: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.linha {
+    background-color: var(--cor7);
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 1px;
+}
+
+.col-1 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor2);
+    margin: 1% 1% 1% 1.6%;
+    width: 25%;
+    display: inline;
+}
+
+.col-2 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor2);
+    margin: 1% 1% 1% 1.6%;
+    width: 25%;
+    display: inline;
+}
+
+.col-3 {
+    background-color: ;
+    text-align: left;
+    color: var(--cor2);
+    margin: 1% 1% 1% 1.6%;
+    width: 50%;
+    text-decoration: none;
+    display: inline;
+}
+
+
+f,
+f:hover,
+f:visited {
+    color: var(--cor2);
+    border-radius: 5px;
+    color: unset;
+    transition-duration: 0.5s;
+    padding: 15px;
+}
+
 
 /* ITENS DO MAIN */
 

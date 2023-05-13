@@ -5,21 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrimu</title>
+    <title>Café com dados</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link rel="stylesheet" href="styles.css" />
+    <link href="grid/simple-grid.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="o-header">
+        <!-- <div class="faixa-de-cor">testando espaço</div> -->
+        </nav>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Time</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Contatos</a></li>
+                <li><a href="#">Home</a>
+                <li><a href="#">Nosso Time</a>
+                <li><a href="#">Projetos</a>
+                <li><a href="#">Contatos</a>
             </ul>
             <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
             <form>
@@ -29,10 +32,10 @@
         </nav>
         <div class="patrimu-menu-botoes">
             <!-- <img src="LOGO1.JPG" alt="ERRO"> trocar imagem para svg -->
-            <h1>Pátrimu</h1>
-            <p>Desenvolvido por
-                <a href="https://www.instagram.com/Vinicius_DantasC/">https://github.com/vdc50</a>
+            <h1>Café com dados - cofebreack - datacoffe - </h1>
+            <p>Desenvolvido por<a href="https://www.instagram.com/Vinicius_DantasC/">https://github.com/vdc50</a>
             </p>
+            <div class="faixa-de-cor">ESPAÇO PARA O CARROSEL</div>
         </div>
 
     </header>
@@ -68,24 +71,48 @@
         </div>
     </aside>
 
-    <main class="o-main">alterar para testar
+    <main class="o-main">
         <section>
-            <article>
-                <h2><strong>Olhando o futuro na recessão de hoje!</strong> </h2>
-                <p>Esse é um dos assuntos que mais pergunta os mais avisados, "desvisados vivem mais"... Brincadeiras a
-                    parte, tudo parece estar se concretizando, juros ajustados para cima, bancos em dificldade e muita
-                    inflação empregada.<br> Algos registram nos contam como esses ciclos podem nos construir ou destruir
-                    por
-                    falta de preparo pelo que vem pela frente.</p>
-                <hr>
-                <h3>Subsection</h3>
-                <p>texto</p>
-                <h3>Another subsection</h3>
-                <p>texto</p>
-            </article>
-        </section>
+            <subsetion class="noticia-linha">
+                <article class="subsecao-col1">
+                    <h5><strong> OLHO NA RECESSÃO </strong></h5>
+                    <p>
+                    <h6>
+                        Esse é um dos assuntos que mais pergunta os mais avisados, "desvisados vivem mais"...
+                        Brincadeiras a parte, tudo parece estar se concretizando, juros ajustados para cima,
+                        bancos em
+                        dificldade e muita inflação empregada.<br> Alguns registros nos contam como esses ciclos
+                        podem nos construir
+                        ou destruir por falta de preparo pelo que vem pela frente. </h6></p>
+                        <hr>
+                </article>
+                <article class="subsecao-col1">
+                    <h5><strong> DADOS CIENTÍFICO </strong></h5>
+                    <p>
+                    <h6>e você tem R$ 120, hoje é seu dia de sorte; empresa brasileira ensina como é possível
+                        transformar R$120 em R$ 1 milhão no menor tempo possível. </h6></p>
+                        <hr>
+                </article>
+                <article class="subsecao-col1">
+                    <h5><strong> DADOS LOCAL VV </strong></h5>
+                    <p>
+                    <h6> Vamos buscar junto a prefeitura informações sobre suas contas ou andamento de controladoria,
+                        seus dados podem se tornar uma porposta de serviço onde estaremos acompanhando seu andamento e
+                        apresentação de forma transparente. </h6></p>
+                        <hr>
+                </article>
 
-        <section id="sales"><!--expansão do site id é único para cada elemento-->
+                <article class="subsecao-col1">
+                    <h5><strong> GRÁFICOS DE WDOxIBOV - JUROS DESCONTO IPCA </strong></h5>
+                    <p>
+                    <h6> Neste poonto vamos importar dados via API para disponibilizar infomações transformadas em dados
+                        preciso para consulta em formato time series. </h6></p>
+                        <hr>
+                </article>
+            </subsetion>
+        </section>
+        <br>
+        <section <section id="sales"><!--expansão do site id é único para cada elemento-->
             <div class="patrimu-container-info"><!--controla a largura-->
                 <div class="patrimu-card-info"><!--recebe o itens-->
                     <h2 class="patrimu-card-title">Vendas</h2>
@@ -169,29 +196,42 @@
             </div>
 
         </section>
-
     </main>
 
     <footer class="o-footer">
-        <h3><strong>Sobre</strong></h3>
-        <br>
-        <h5>
-            <p>Sobre nos/p>
-        </h5>
-        <h5>
-            <p>Politica de Privacidade</p>
-        </h5>
-        <h5>
-            <p>Política de Cookies</p>
-        </h5>
-
-        <h3><strong>Contatos</strong></h3>
-        <h5>
-            <p>email: vdantas@gmail.com</p>
-        </h5>
-        <h5>
-            <p>Whatzap: 27 xxxx-xxxx</p>
-        </h5>
+        <div class="linha">
+            <div class="col-1">
+                <h3>Trabalhando com dados</h3>
+                <ul>
+                    <li>
+                        <f href="Motivação"> Motivação </f>
+                    <li>
+                        <f href="Educação"> Educação </f>
+                    <li>
+                        <f href="Imprensa"> Imprensa </f>
+                    <li>
+                        <f href="Parcerias"> Parcerias </f>
+                    <li>
+                        <f href="Cadastros"> Trabalhe conosco </f>
+                </ul>
+            </div>
+            <div class="col-2">
+                <h3> Central e Ajuda </h3>
+                <ul>
+                    <li>
+                        <f href="Aviso de Privacidade"> Aviso de Privacidade </f>
+                    <li>
+                        <f href="Vagas"> Vagas </f>
+                    <li>
+                        <f href="ondições de Uso"> Condições de Uso </f>
+                </ul>
+            </div>
+            <div>
+                <div class="col-3">
+                    <p>Quer receber avisos sobre novas atualzições? Assine nossa newsletter.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
