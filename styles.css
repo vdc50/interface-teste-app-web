@@ -12,7 +12,8 @@
 :root {
     /*1rem = 16px, então há 48px em cada espaço, x2 espaço 96px*/
     --gap: 3rem;
-    --largura_base: 200px;/*laptop 773px então = aside 200px main 500px*/
+    --largura_base: 200px;
+    /*laptop 773px então = aside 200px main 500px*/
     -sobra: 15px;
     --cor7: #0C376F;
     --cor6: #2A4E7F;
@@ -49,6 +50,7 @@
     background-color: black;
     background: var(--cor1);
 
+
 }
 
 /******** GRID iPAD + LAPTOP *********/
@@ -56,7 +58,8 @@
     body {
         /*>> iPAD 773px e laptop 979px x 741px */
         background-color: green;
-        font-family: serif;
+        font-family: serif, Arial, Helvetica, sans-serif;
+        font-size: 14px;
         display: grid;
         grid-gap: 0px;
         /* espaço entre os elementos do grid */
@@ -67,17 +70,22 @@
         grid-template-columns: auto auto auto;
         /*vh = atribui total de linhas da viewport, */
         grid-template-rows: auto auto auto;
+        padding: 0px 10px 10px 10px;
     }
 
     .o-header {
         grid-area: header;
         background: var(--cor7);
         text-align: left;
-        margin-top: 5px;
-        padding-top: 0px;
-        padding-left: 0px;
+        /* margin-top: 5px; */
+        /* padding-top: 0px;
+        padding-left: 0px; */
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+        position: sticky;
+        top: 0;
+        /* left: 0; */
+        display: grid;
     }
 
     .o-aside {
@@ -93,11 +101,11 @@
     .o-main {
         background: var(--cor1);
         color: #fdfdfd;
-        padding-top: 10px;
+        /* padding-top: 10px; */
     }
 
     .header-container-carrosel {
-        background-color:var(--cor6);
+        background-color: var(--cor6);
         color: white;
         margin-top: 3px;
         padding: 1px;
@@ -121,19 +129,81 @@
     }
 
     /* ------ FAIXA INICIAL (MENU) ------*/
-    a,
+    * {
+        margin: 0px;
+        padding: 0;
+    }
+
+    .menu {
+        /*Removendo bullets e colocando borda*/
+        list-style: none;
+        border-right: 1px solid white;
+        float: right;
+    }
+
+    .menu li {
+        /*Estilizando itens do menu*/
+        position: relative;
+        float: left;
+        /* border-right: 1px solid #c0c0c0; */
+
+    }
+
+    .menu li a {
+        /*Estilizando links*/
+        color: var(--cor1);
+        text-decoration: none;
+        padding: 0px 30px;
+        display: block;
+    }
+
+    .menu li a:hover {
+        /*Estilizando links*/
+        /* background: var(--cor7); */
+        color: #fff;
+        -moz-window-shadow: 0 3px 10px 0 #CCC;
+        /* -webkit-box-shadow: 0 3px 10px 0 #ccc; */
+        text-shadow: 0px 0px 5px;
+    }
+
+    .menu li ul {
+        /*Escondendo submenu*/
+        background-color: none;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+
+        display: none;
+    }
+
+    .menu li:hover ul,
+    .menu li.over ul {
+        /*Exibindo submenu*/
+        display: block;
+        height: 100px;
+        text-align-last: center;
+    }
+
+    .menu li ul li {
+        /*Ajustes finais*/
+        /* border: 1px solid #c0c0c0; */
+        display: block;
+        width: 160px;
+        margin: -15px;
+        font-size: 13px;
+    }
+
+    /* a,
     a:hover,
     a:visited {
         color: var(--cor3);
         border-radius: 5px;
-        /* color: unset; */
-        text-decoration: none;
+        color: unset;
+        text-decoration: line-through;
         transition-duration: 0.5s;
-        padding: 15px;
-        text-decoration: none;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-    }
+        padding: 20px;
+        text-decoration: double;
+    } */
 
     header h1 {
         color: var(--cor2);
@@ -211,7 +281,7 @@
     }
 
     .subsecao-col1 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor7);
         margin: 1% 1% 1% 1.6%;
@@ -220,7 +290,7 @@
     }
 
     .subsecao-col2 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor7);
         margin: 1% 1% 1% 1.6%;
@@ -229,7 +299,7 @@
     }
 
     .subsecao-col3 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor7);
         margin: 1% 1% 1% 1.6%;
@@ -238,7 +308,7 @@
     }
 
     .subsecao-col4 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor7);
         margin: 1% 1% 1% 1.6%;
@@ -275,7 +345,7 @@
     }
 
     .col-1 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor2);
         margin: 1% 1% 1% 1.6%;
@@ -284,7 +354,7 @@
     }
 
     .col-2 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor2);
         margin: 1% 1% 1% 1.6%;
@@ -293,7 +363,7 @@
     }
 
     .col-3 {
-        background-color: ;
+        /* background-color: ; */
         text-align: left;
         color: var(--cor2);
         margin: 1% 1% 1% 1.6%;
